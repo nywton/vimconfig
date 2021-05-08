@@ -14,3 +14,6 @@ Those folks are language-agnostic.
 ```git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install```
 ### The silver searcher 
 https://github.com/ggreer/the_silver_searcher
+
+### PowerLevel10k Theme
+https://github.com/romkatv/powerlevel10k#oh-my-zsh
