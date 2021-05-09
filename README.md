@@ -1,4 +1,14 @@
 # vimconfig
+## .vimrcset number
+```
+syntax on  
+colorscheme peachpuff  
+set cindent
+set autoindent
+set smarttab
+set expandtab
+set cursorline
+```
 ## Essential Vim plugins
 Those folks are language-agnostic.
 
@@ -17,3 +27,6 @@ https://github.com/ggreer/the_silver_searcher
 
 ### PowerLevel10k Theme
 https://github.com/romkatv/powerlevel10k#oh-my-zsh
+
+### References
+https://dougblack.io/words/a-good-vimrc.html
