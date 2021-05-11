@@ -1,6 +1,7 @@
 # vimconfig
-## .vimrcset number
+## .vimrc
 ```
+set number
 syntax on  
 colorscheme peachpuff  
 set cindent
