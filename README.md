@@ -8,6 +8,11 @@ Vim plugins are usually managed using a plugin manager. One popular option is Vi
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
+```
+# Install fzf
+
+brew install fzf
+```
 Create or Edit your Vim Configuration:
 Create a .vimrc file in your home directory if it doesn't exist, or edit it if it does:
 
@@ -40,14 +45,7 @@ Plug 'airblade/vim-gitgutter' " Git diff indicators
 Plug 'vim-airline/vim-airline' " Status bar
 
 call plug#end()
-```
 
-Save the file and run :PlugInstall within Vim to install the listed plugins.
-
-Configure Plugins:
-Below the plugin section in your .vimrc, add configurations for specific plugins:
-
-```
 " vim-ruby and vim-rails
 autocmd FileType ruby,rails setlocal shiftwidth=2 tabstop=2 expandtab
 
@@ -65,19 +63,20 @@ let g:gitgutter_enabled = 1
 
 " vim-airline
 let g:airline_powerline_fonts = 1
-```
 
-## .vimrc
-```
 set number
-syntax on  
-colorscheme peachpuff  
+syntax on
+se mouse+=a
 set cindent
 set autoindent
 set smarttab
-set expandtab
+set expandable
 set cursorline
 ```
+
+Save the file and run `:PlugInstall` within Vim to install the listed plugins.
+
+
 ## Essential Vim plugins
 Those folks are language-agnostic.
 
