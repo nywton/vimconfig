@@ -30,6 +30,33 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 
+" File Searching
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+" NerdTree -  https://github.com/preservim/nerdtree
+Plug 'preservim/nerdtree'
+
+" Press <leader>f to trigger file search
+nnoremap <silent> <leader>f :Files<CR>
+
+" Press <leader>s to trigger file search
+nnoremap <silent> <leader>s :Ag<CR>
+
+" Press <leader>b to switch buffers
+nnoremap <silent> <leader>b :Buffers<CR>
+
+" Press <leader>h to search for text within open buffers
+nnoremap <silent> <leader>h :History<CR>
+
+" Press <leader>t to open NerdTree view
+" nnoremap <silent> <leader>t :NERDTree<CR>
+
+nnoremap <leader>n :NERDTreeFocus<CR>
+" nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
 " JavaScript
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
@@ -46,31 +73,13 @@ Plug 'vim-airline/vim-airline' " Status bar
 
 call plug#end()
 
-" vim-ruby and vim-rails
-autocmd FileType ruby,rails setlocal shiftwidth=2 tabstop=2 expandtab
-
-" vim-jsx
-autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 expandtab
-
-" Dockerfile.vim
-autocmd FileType dockerfile setlocal shiftwidth=4 tabstop=4 expandtab
-
-" vim-dadbod
-let g:db#connect_prompt = 0 " Disable DB connection prompts in Docker
-
-" vim-gitgutter
-let g:gitgutter_enabled = 1
-
-" vim-airline
-let g:airline_powerline_fonts = 1
-
 set number
-syntax on
 se mouse+=a
+syntax on  
 set cindent
 set autoindent
 set smarttab
-set expandable
+set expandtab
 set cursorline
 ```
 
