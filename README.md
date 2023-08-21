@@ -37,6 +37,18 @@ Plug 'junegunn/fzf.vim'
 " NerdTree -  https://github.com/preservim/nerdtree
 Plug 'preservim/nerdtree'
 
+" JavaScript
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+
+" Docker
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'tpope/vim-dadbod' " For database support, including Docker
+
+Plug 'vim-airline/vim-airline' " Status bar
+
+call plug#end()
+
 " Press <leader>f to trigger file search
 nnoremap <silent> <leader>f :Files<CR>
 
@@ -49,29 +61,10 @@ nnoremap <silent> <leader>b :Buffers<CR>
 " Press <leader>h to search for text within open buffers
 nnoremap <silent> <leader>h :History<CR>
 
-" Press <leader>t to open NerdTree view
-" nnoremap <silent> <leader>t :NERDTree<CR>
-
+" NerdTree shorts
 nnoremap <leader>n :NERDTreeFocus<CR>
-" nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
-
-" JavaScript
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-
-" Docker
-Plug 'ekalinin/Dockerfile.vim'
-Plug 'tpope/vim-dadbod' " For database support, including Docker
-
-" Other useful plugins
-Plug 'tpope/vim-fugitive' " Git integration
-Plug 'scrooloose/nerdtree' " File explorer
-Plug 'airblade/vim-gitgutter' " Git diff indicators
-Plug 'vim-airline/vim-airline' " Status bar
-
-call plug#end()
 
 set number
 se mouse+=a
@@ -81,6 +74,7 @@ set autoindent
 set smarttab
 set expandtab
 set cursorline
+
 ```
 
 Save the file and run `:PlugInstall` within Vim to install the listed plugins.
