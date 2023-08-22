@@ -22,6 +22,8 @@ vim ~/.vimrc
 Add Plugins:
 Add the following lines to your .vimrc to configure plugins for Ruby, Rails, JavaScript, and Docker:
 
+### The `.vimrc`
+
 ```
 " Use Vim-Plug to manage plugins
 call plug#begin('~/.vim/plugged')
@@ -65,12 +67,23 @@ nnoremap <silent> <leader>h :History<CR>
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
+nnoremap <C-l> :tabn<CR>
+nnoremap <C-h> :tabp<CR>
+
 
 set number
 se mouse+=a
 syntax on  
 set cindent
 set autoindent
+filetype plugin indent on
+" On pressing tab, insert 2 spaces
+set expandtab
+" show existing tab with 2 spaces width
+set tabstop=2
+set softtabstop=2
+" when indenting with '>', use 2 spaces width
+set shiftwidth=2
 set smarttab
 set expandtab
 set cursorline
