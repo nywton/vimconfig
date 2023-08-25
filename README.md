@@ -70,7 +70,6 @@ nnoremap <C-f> :NERDTreeFind<CR>
 nnoremap <C-l> :tabn<CR>
 nnoremap <C-h> :tabp<CR>
 
-
 set number
 se mouse+=a
 syntax on  
@@ -87,6 +86,9 @@ set shiftwidth=2
 set smarttab
 set expandtab
 set cursorline
+set cursorcolumn
+
+
 
 ```
 
