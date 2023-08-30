@@ -130,4 +130,3 @@ set cursorline
 " clipboard
 set clipboard=unnamedplus
 nnoremap y "+y
-nnoremap y "+y
