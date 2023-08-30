@@ -8,10 +8,20 @@ Vim plugins are usually managed using a plugin manager. One popular option is Vi
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
-```
-# Install fzf
 
+# Copy to Clipboard
+```
+# ubuntu
+sudo apt install vim-gtk3 -y
+```
+
+# Install fzf
+```
+# osx
 brew install fzf
+
+# ubuntu
+sudo apt install fzf
 ```
 Create or Edit your Vim Configuration:
 Create a .vimrc file in your home directory if it doesn't exist, or edit it if it does:
@@ -19,78 +29,10 @@ Create a .vimrc file in your home directory if it doesn't exist, or edit it if i
 ```
 vim ~/.vimrc
 ```
-Add Plugins:
-Add the following lines to your .vimrc to configure plugins for Ruby, Rails, JavaScript, and Docker:
 
-### The `.vimrc`
-
-```
-" Use Vim-Plug to manage plugins
-call plug#begin('~/.vim/plugged')
-
-" Ruby and Rails
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
-
-" File Searching
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-
-" NerdTree -  https://github.com/preservim/nerdtree
-Plug 'preservim/nerdtree'
-
-" JavaScript
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-
-" Docker
-Plug 'ekalinin/Dockerfile.vim'
-Plug 'tpope/vim-dadbod' " For database support, including Docker
-
-Plug 'vim-airline/vim-airline' " Status bar
-
-call plug#end()
-
-" Press <leader>f to trigger file search
-nnoremap <silent> <leader>f :Files<CR>
-
-" Press <leader>s to trigger file search
-nnoremap <silent> <leader>s :Ag<CR>
-
-" Press <leader>b to switch buffers
-nnoremap <silent> <leader>b :Buffers<CR>
-
-" Press <leader>h to search for text within open buffers
-nnoremap <silent> <leader>h :History<CR>
-
-" NerdTree shorts
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
-nnoremap <C-l> :tabn<CR>
-nnoremap <C-h> :tabp<CR>
-
-set number
-se mouse+=a
-syntax on  
-set cindent
-set autoindent
-filetype plugin indent on
-" On pressing tab, insert 2 spaces
-set expandtab
-" show existing tab with 2 spaces width
-set tabstop=2
-set softtabstop=2
-" when indenting with '>', use 2 spaces width
-set shiftwidth=2
-set smarttab
-set expandtab
-set cursorline
-set cursorcolumn
+Copy the .vimrc file
 
 
-
-```
 
 Save the file and run `:PlugInstall` within Vim to install the listed plugins.
 
