@@ -1,6 +1,9 @@
 " Use Vim-Plug to manage plugins
 call plug#begin('~/.vim/plugged')
 
+" Vim Theme https://github.com/mhartington/oceanic-next
+Plug 'mhartington/oceanic-next'
+
 " Prettier
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 
@@ -102,7 +105,13 @@ let g:prettier#config#end_of_line = get(g:, 'prettier#config#end_of_line', 'lf')
 
 set number
 se mouse+=a
-syntax on  
+
+" Theme config
+syntax enable  
+
+colorscheme OceanicNext
+let g:airline_theme='oceanicnext'
+
 set cindent
 set autoindent
 filetype plugin indent on
@@ -123,10 +132,20 @@ set statusline+=%F
 
 " Cursor Config
 set cursorline
-:hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+":hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 :hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 :nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
 " clipboard
 set clipboard=unnamedplus
 nnoremap y "+y
+
+" Maintain undo history between sessions
+set undofile " Maintain undo history between sessions
+set undodir=~/.vim/undodir
+
+" Ruby Plugin Config
+" g:ruby_recommended_style
+
+" Cursor
+" set virtualedit=onemore
